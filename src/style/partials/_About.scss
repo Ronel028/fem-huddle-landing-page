@@ -1,0 +1,94 @@
+
+@import './variables';
+
+.about{
+    position: relative;
+
+    .card--container{
+        padding: Rem(144) 0 Rem(280);
+        .card{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            column-gap: Rem(20);
+            align-items: center;
+            padding-left: Rem(121);
+            padding-right: Rem(40);
+            padding-top: Rem(50);
+            padding-bottom: Rem(50);
+            box-shadow: 1px 4px 12px 0px rgba(17, 17, 26, 0.18);
+            border-radius: Rem(12);
+            margin-bottom: Rem(35);
+
+            .card-text{
+                h3{
+                    font-family: $font-poppins;
+                    font-weight: 600;
+                    font-size: Rem(22);
+                    color: $Very-Dark-Cyan;
+                    margin-bottom: Rem(23);
+                }
+                p{
+                    color: $Grayish-Blue;
+                }
+            }
+
+            .card-image{
+                width: Rem(407);
+                height: Rem(359);
+
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    // card
+    .modal{
+        background-color: #FFFFFF;
+        width: Rem(726);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: Rem(67) Rem(133);
+        box-shadow: 1px 4px 12px 0px rgba(17, 17, 26, 0.18);
+        border-radius: Rem(12);
+
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        transform: translateX(-50%);
+
+        h3{
+            font-family: $font-poppins;
+            font-weight: 600;
+            font-size: Rem(22);
+            color: $Very-Dark-Cyan;
+            margin-bottom: Rem(38);
+        }
+        button{
+            height: Rem(57);
+            width: Rem(280);
+            background-color: $Pink;
+            color: $Very-Pale-Cyan;
+            cursor: pointer;
+            position: relative;
+
+            &:hover::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: Rem(48);
+                opacity: 60%;
+                background-color: $Very-Pale-Cyan;
+            }
+        }
+    }
+}

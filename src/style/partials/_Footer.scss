@@ -1,0 +1,86 @@
+@import './variables';
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: $Very-Dark-Cyan;
+    padding: Rem(191) 0 Rem(56);
+    color: $Very-Pale-Cyan;
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: Rem(35);
+
+        .contact-info{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+
+            .contact{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                row-gap: Rem(26);
+                .location, .phone, .email{
+                    display: flex;
+
+                    img{
+                        height: Rem(19);
+                        margin-right: Rem(30);
+                    }
+                }
+            }
+
+            .about-us-1, .about-us-2{
+                ul{
+                    li{
+                        margin-bottom: Rem(24);
+                        a{
+                            color: $Very-Pale-Cyan;
+                            font-family: $font-openSans;
+                            
+
+                            &:hover{
+                                transition: all 0.2s ease-in-out;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social-media{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    
+                    li{
+                        margin-right: Rem(12);
+                        
+                        a{
+                            color: $Very-Pale-Cyan;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 2px solid $Very-Pale-Cyan;
+                            width: Rem(33);
+                            height: Rem(33);
+                            border-radius: 50%;
+                            padding: Rem(7);
+                            transition: all 0.2s ease-in-out;
+
+                            &:hover{
+                                border-color: $Pink;
+                                color: $Pink;
+                            }
+
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}

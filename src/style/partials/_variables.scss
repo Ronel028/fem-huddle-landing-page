@@ -1,0 +1,20 @@
+
+// colors
+
+// Primary
+$Pink: hsl(322, 100%, 66%);
+
+// Neutral
+$Very-Pale-Cyan: hsl(193, 100%, 96%);
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Grayish-Blue: hsl(208, 11%, 55%);
+
+// font
+$font-poppins: 'Poppins', sans-serif;
+$font-openSans: 'Open Sans', sans-serif;
+
+// function that can convert px to rem
+@function Rem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+} 

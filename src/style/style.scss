@@ -1,0 +1,46 @@
+
+@import "./partials//variables";
+@import './partials/Header';
+@import './partials//About';
+@import './partials/Footer';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: Rem(1280);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn{
+    font-size: Rem(13);
+    font-weight: 700;
+    font-family: $font-openSans;
+    border-radius: Rem(48);
+    border: none;
+}
+
+.p-font{
+    font-family: $font-openSans;
+    font-weight: 400;
+    font-size: Rem(16);
+    line-height: Rem(24);
+}
+
+.justify-self-end{
+    justify-self: end;
+}
+.justify-self-center{
+    justify-self: center;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
