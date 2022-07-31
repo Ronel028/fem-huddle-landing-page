@@ -31,11 +31,28 @@
     line-height: Rem(24);
 }
 
+.font-size{
+    @media screen and (max-width: Rem(315)){
+        font-size: 5vw;
+    }
+}
+
 .justify-self-end{
     justify-self: end;
 }
 .justify-self-center{
     justify-self: center;
+}
+.justify-self-start{
+    @media screen and(max-width: Rem(969)){
+        justify-self: start;
+    }
+}
+
+.justify-center{
+    @media screen and(max-width: Rem(969)){
+        justify-self: center;
+    }
 }
 
 ul{
@@ -43,4 +60,19 @@ ul{
 }
 a{
     text-decoration: none;
+}
+
+.grid-area-text{
+    @media screen and (max-width: Rem(630)){
+        grid-area: text;
+    }
+    
+}
+.grid-area-image{
+    @media screen and (max-width: Rem(630)){
+        grid-area: image;
+    }
+}
+.text-align{
+    text-align: center;
 }

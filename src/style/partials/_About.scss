@@ -6,6 +6,7 @@
 
     .card--container{
         padding: Rem(144) 0 Rem(280);
+        
         .card{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -20,22 +21,62 @@
             border-radius: Rem(12);
             margin-bottom: Rem(35);
 
+            @media screen and (max-width: Rem(630)){
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                row-gap: Rem(20);
+
+                grid-template-areas: "image" "text";
+
+                padding-left: Rem(40);
+                padding-bottom: Rem(15);
+            }
+
             .card-text{
+                @media screen and (max-width: Rem(630)){
+                    text-align: center;
+                }
                 h3{
                     font-family: $font-poppins;
                     font-weight: 600;
                     font-size: Rem(22);
                     color: $Very-Dark-Cyan;
                     margin-bottom: Rem(23);
+
+                    @media screen and (max-width: Rem(959)){
+                       font-size: 3.4vw;
+                    }
+                    @media screen and (max-width: Rem(630)){
+                        font-size: Rem(22);
+                        margin-bottom: Rem(17);
+                    }
+                    @media screen and (max-width: Rem(400)){
+                        font-size: Rem(17);
+                    }
                 }
                 p{
                     color: $Grayish-Blue;
+
+                    @media screen and (max-width: Rem(959)){
+                        font-size: 1.7vw;
+                    }
+                    @media screen and (max-width: Rem(630)){
+                        font-size: Rem(16);
+                    }
+                    @media screen and (max-width: Rem(400)){
+                        font-size: Rem(12);
+                    }
                 }
             }
 
             .card-image{
                 width: Rem(407);
                 height: Rem(359);
+
+                @media screen and (max-width: Rem(959)){
+                    width: 100%;
+                    height: auto;
+                }
 
                 img{
                     width: 100%;
@@ -63,12 +104,27 @@
         bottom: -100px;
         transform: translateX(-50%);
 
+        @media screen and(max-width: Rem(826)){
+            width: 100%;
+            padding: Rem(67) 0;
+        }
+        @media screen and(max-width: Rem(487)){
+            padding: Rem(58) 0;
+        }
+
         h3{
             font-family: $font-poppins;
             font-weight: 600;
             font-size: Rem(22);
             color: $Very-Dark-Cyan;
             margin-bottom: Rem(38);
+
+            @media screen and (max-width: Rem(496)){
+                font-size: 4.4vw;
+            }
+            @media screen and(max-width: Rem(431)){
+                margin-bottom: Rem(30);
+            }
         }
         button{
             height: Rem(57);
@@ -77,6 +133,12 @@
             color: $Very-Pale-Cyan;
             cursor: pointer;
             position: relative;
+
+            @media screen and(max-width: Rem(431)){
+                width: 70%;
+                height: Rem(45);
+                font-size: Rem(12);
+            }
 
             &:hover::before{
                 content: "";

@@ -15,7 +15,7 @@ function About(){
             <div className="card--container">
 
                 <div className="card card-1">
-                    <div className="card-text">
+                    <div className="card-text grid-area-text">
                         <h3>Grow Together</h3>
                         <p className="p-font">
                             Generate meaningful discussions with your audience and build a
@@ -23,7 +23,7 @@ function About(){
                             you miss out on with the feedback form.
                         </p>
                     </div>
-                    <div className="card-image justify-self-end">
+                    <div className="card-image justify-self-end grid-area-image">
                         <img src={GrowTogether} alt="Grow together" />
                     </div>
                 </div>
@@ -43,7 +43,7 @@ function About(){
                 </div>
 
                 <div className="card card-3">
-                    <div className="card-text">
+                    <div className="card-text grid-area-text">
                         <h3>Your Users</h3>
                         <p className="p-font">
                             It takes no time at all to integrate huddle with your app's
@@ -51,7 +51,7 @@ function About(){
                             app, your user can start chatting immediately.
                         </p>
                     </div>
-                    <div className="card-image justify-self-end">
+                    <div className="card-image justify-self-end grid-area-image">
                         <img src={YourUsers} alt="Your user" />
                     </div>
                 </div>
