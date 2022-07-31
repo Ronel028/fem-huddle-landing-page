@@ -11,12 +11,29 @@
     
     padding: Rem(43) 0;
 
+    @media screen and (max-width: Rem(390)){
+        background: url("/src/assets/images/bg-hero-mobile.svg"), $Very-Pale-Cyan;
+    }
+
     // nav -------------------
     .nav--menu{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: Rem(62);
+
+        a{
+            @media screen and (max-width: Rem(864)){
+                width: 32vw;
+            }
+            img{
+                @media screen and (max-width: Rem(864)){
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+        }
 
         button{
             width: Rem(202);
@@ -25,6 +42,15 @@
             box-shadow: 1px 4px 12px 0px rgba(17, 17, 26, 0.18);
             transition: color 0.2s ease-in;
             cursor: pointer;
+
+            @media screen and (max-width: Rem(864)){
+                width: Rem(180);
+                height: Rem(44);
+            }
+            @media screen and (max-width: Rem(488)){
+                width: Rem(111);
+                height: Rem(30);
+            }
 
             &:hover{
                 color: $Grayish-Blue;
@@ -38,11 +64,23 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: auto;
+        column-gap: Rem(10);
         align-items: center;
+
+        @media screen and (max-width: Rem(864)){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            row-gap: Rem(66);
+        }
 
         .hero-text{
             
             max-width: Rem(520);
+
+            @media screen and (max-width: Rem(864)){
+                text-align: center;
+                max-width: none;
+            }
 
             h1{
                 font-family: $font-poppins;
@@ -50,10 +88,30 @@
                 color: $Very-Dark-Cyan;
                 font-size: Rem(39);
                 margin-bottom: Rem(23);
+
+                @media screen and (max-width: Rem(1144)){
+                    font-size: 3vw;
+                }
+                @media screen and (max-width: Rem(864)){
+                    font-size: Rem(39);
+                }
+                @media screen and (max-width: Rem(488)){
+                    font-size: Rem(22);
+                }
             }
             p{
                 color: $Very-Dark-Cyan;
                 margin-bottom: Rem(23);
+
+                @media screen and (max-width: Rem(1144)){
+                    font-size: 1.5vw;
+                }
+                @media screen and (max-width: Rem(864)){
+                    font-size: 1rem;
+                }
+                @media screen and (max-width: Rem(488)){
+                    font-size: Rem(13);
+                }
             }
             button{
                 height: Rem(57);
@@ -62,6 +120,16 @@
                 color: $Very-Pale-Cyan;
                 cursor: pointer;
                 position: relative;
+
+                @media screen and (max-width: Rem(1144)){
+                    width: 23vw;
+                }
+                @media screen and (max-width: Rem(864)){
+                    width: 70%;
+                }
+                @media screen and (max-width: Rem(488)){
+                    height: Rem(48);
+                }
 
                 &:hover::before{
                     content: "";
@@ -82,10 +150,19 @@
             width: 100%;
             height: Rem(481);
 
-            img{
-                width: 100%;
+            @media screen and (max-width: Rem(1144)){
                 height: auto;
+            }
+
+            img{
+                min-width: 100%;
+                height: 100%;
                 object-fit: cover;
+
+                @media screen and (max-width: Rem(1144)){
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
