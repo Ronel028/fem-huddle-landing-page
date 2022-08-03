@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // component
 import Card from './Card';
@@ -10,11 +12,33 @@ import FlowingConvo from '../assets/images/illustration-flowing-conversation.svg
 import YourUsers from '../assets/images/illustration-your-users.svg'
 
 function About(){
+
+    const { ref, inView} = useInView();
+    const animation = useAnimation();
+
+    useEffect(function(){
+        if(inView){
+            animation.start({
+                opacity: 1,
+            })
+        }
+        if(!inView){
+            animation.start({
+                opacity: 0,
+            })
+        }
+    }, [inView])
+
     return (
         <section className="about container">
-            <div className="card--container">
 
-                <div className="card card-1">
+            <div ref={ref} className="card--container">
+
+                <motion.div 
+                    className="card card-1"
+                    animate={animation}
+                    transition={{ delay: 0.5 }}
+                >
                     <div className="card-text grid-area-text">
                         <h3>Grow Together</h3>
                         <p className="p-font">
@@ -26,9 +50,13 @@ function About(){
                     <div className="card-image justify-self-end grid-area-image">
                         <img src={GrowTogether} alt="Grow together" />
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="card card-2">
+                <motion.div
+                    className="card card-2"
+                    animate={animation}
+                    transition={{ delay: 0.8 }}
+                >
                     <div className="card-image">
                         <img src={FlowingConvo} alt="Flowing conversation" />
                     </div>
@@ -40,9 +68,13 @@ function About(){
                             more natural flow.
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="card card-3">
+                <motion.div 
+                    className="card card-3"
+                    animate={animation}
+                    transition={{ delay: 1 }}
+                >
                     <div className="card-text grid-area-text">
                         <h3>Your Users</h3>
                         <p className="p-font">
@@ -54,7 +86,7 @@ function About(){
                     <div className="card-image justify-self-end grid-area-image">
                         <img src={YourUsers} alt="Your user" />
                     </div>
-                </div>
+                </motion.div>
 
             </div>
 

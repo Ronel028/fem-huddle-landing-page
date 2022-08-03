@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // images
 import Logo from '../assets/images/logo.svg'
@@ -20,17 +21,40 @@ function Header(){
                 {/* main */}
                 <main className="hero--section">
                     <div className="hero-text">
-                        <h1>Build The Community Your Fans Will Love</h1>
-                        <p className="p-font">
+                        <motion.h1
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1}}
+                            transition={{ duration: 0.5, delay: 0.3  }}
+                        >
+                            Build The Community Your Fans Will Love
+                        </motion.h1>
+                        <motion.p 
+                            className="p-font"
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1}}
+                            transition={{ duration: 0.5, delay: 0.5  }}
+                        >
                             Huddle re-imagines the way we build Communities. You have a voice, but
                             so thats your audience. Create connections with your users as you engage
                             in genuine discussion.
-                        </p>
-                        <button className="btn">Get Started For Fee</button>
+                        </motion.p>
+                        <motion.button 
+                            className="btn"
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1}}
+                            transition={{ duration: 0.5, delay: 0.7  }}
+                        >
+                            Get Started For Fee
+                        </motion.button>
                     </div>
-                    <div className="hero-image">
+                    <motion.div 
+                        className="hero-image"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.7}}
+                    >
                         <img src={HeroImage} alt="Illustration Mockups" />
-                    </div>
+                    </motion.div>
                 </main>
                 {/* end main */}
             </div>

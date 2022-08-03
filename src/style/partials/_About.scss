@@ -3,9 +3,10 @@
 
 .about{
     position: relative;
+    padding: Rem(144) 0 Rem(280);
 
     .card--container{
-        padding: Rem(144) 0 Rem(280);
+        overflow: hidden;
         
         .card{
             display: grid;
